@@ -1,0 +1,94 @@
+.welcome-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__field {
+        position: relative;
+        &-control {
+            position: absolute;
+            top: 35%;
+            right: 30px;
+            &.true {
+                .welcome-form__field-check {
+                    opacity: 1;
+                }
+                .welcome-form__field-x {
+                    opacity: 0;
+                }
+            }
+            &.false {
+                .welcome-form__field-check {
+                    opacity: 0;
+                }
+                .welcome-form__field-x {
+                    opacity: 1;
+                }
+            }
+
+        }
+        &-check, &-x {
+            position: absolute;
+            transition: all .5s;
+            opacity: 0;
+        }
+        &-eye {
+            width: 25px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            img {
+                width: 100%;
+            }
+            &::after {
+                content: '';
+                display: block;
+                height: 25px;
+                width: 1px;
+                background-color: #3f3f3f;
+                position: absolute;
+                top: -24%;
+                right: 49%;
+                transform: rotate(45deg);
+                opacity: 1;
+                transition: all .5s;
+            }
+            &.active {
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &__input {
+        border: none;
+        min-width: 368px;
+        min-height: 60px;
+        background: rgba($color: #000, $alpha: .03);
+        margin-bottom: 2px;
+        padding: 16px 20px;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        &--first {
+            border-radius: 15px 15px 0px 0px;
+        }
+        &--end {
+            border-radius: 0px 0px 15px 15px;
+        }
+        outline: none;
+    }
+    &__btn {
+        margin-top: 16px;
+    }
+    &__epilog {
+        font-family: 'Poppins', sans-serif;
+        margin-top: 262px;
+        font-size: 16px;
+        a {
+            font-weight: 700;
+            text-decoration: none;
+            color: #333;
+        }
+    }
+}

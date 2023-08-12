@@ -1,0 +1,19 @@
+.welcome {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        font-size: 28px;
+        letter-spacing: -0.06rem;
+    }
+    &__btns {
+        margin-top: 66px;
+    }
+    &__btn {
+        margin-bottom: 31px;
+    }
+}

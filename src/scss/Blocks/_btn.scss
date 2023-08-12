@@ -1,0 +1,29 @@
+.btn {
+    @include adaptive-value(padding-top, 26, 15);
+    @include adaptive-value(padding-bottom, 26, 15);
+    @include adaptive-value(padding-right, 93, 43);
+    @include adaptive-value(padding-left, 93, 43);
+    border-radius: 64px;
+    background: linear-gradient(180deg, #C8F170 0%, #55D349 100%);
+    box-shadow: 0px 12px 14px 5px rgba(0, 0, 0, 0.25);
+    border: none;
+    cursor: pointer;
+    transition: all 1s;
+    span {
+        font-family: 'Holtwood';
+        @include adaptive-value(font-size, 73, 43);
+        // font-size: 73px;
+        background: linear-gradient(180deg, #F1ED8A 0.01%, #E1FF6A 11.38%, rgba(229, 151, 0, 1) 120.3%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #467100;
+        line-height: 100px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.18rem;
+    }
+    &:hover {
+        background: linear-gradient(180deg, #7A9347 0%, #42C937 100%);
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Spin</title>
+</head>
+<body>
+    <main id="spin" class="spin">
+        <div class="container">
+            <div class="spin__wrap-title">
+                <div class="spin__title">
+                    <h1 class="spin__title-text">
+                        FORTUNE
+                    <br>
+                        WHEEL
+                    </h1>
+                </div>
+            </div>
+            <div class="spin__wrap">
+                <div data-rotate="false" id="wheel" class="spin__wheel">
+                    <div style="--i: 0; --count: 4;" id="jackpot" class="spin__wheel-item false corona"><span>JACK<br>POT</span><img src="images/corona.svg" alt="corona"></div>
+                    <div style="--i: 1;" class="spin__wheel-item diamond">
+                        <img src="images/diamond.svg" alt="diamond">
+                        <div class="spin__wheel-item-count"><span>x 3</span></div>
+                    </div>
+                    <div style="--i: 2;" class="spin__wheel-item false heart">
+                        <img src="images/heart.svg" alt="heart">
+                        <div class="spin__wheel-item-count"><span>x 3</span></div>
+                    </div>
+                    <div style="--i: 3;" class="spin__wheel-item zip">
+                        <img src="images/zip.svg" alt="zip">
+                        <div class="spin__wheel-item-count"><span>x 3</span></div>
+                    </div>
+                    <div style="--i: 4;" class="spin__wheel-item dolor">
+                        <img src="images/dolor.svg" alt="dolor">
+                        <div class="spin__wheel-item-count"><span>x 3</span></div>
+                    </div>
+                    <div style="--i: 5;" class="spin__wheel-item zip">
+                        <img src="images/zip.svg" alt="zip">
+                        <div class="spin__wheel-item-count"><span>x 3</span></div>
+                    </div>
+                    <div style="--i: 6;" class="spin__wheel-item heart">
+                        <img src="images/heart.svg" alt="heart">
+                        <div class="spin__wheel-item-count"><span>x 3</span></div>
+                    </div>
+                </div>
+                <div class="spin__circle"></div>
+            </div>
+            <button id="rotate" class="btn spin__btn"><span>SPIN!</span></button>
+        </div>
+    </main>
+    <div class="spin-modal">
+        <div id="modal" class="spin-modal__border">
+                <div class="spin-modal__content">
+                    <h2 class="spin-modal__title">CONGRATS!</h2>
+                    <div class="spin-modal__img">
+                        <div class="spin-modal__count"><span>x4</span></div>
+                        <img src="images/heart.svg" alt="heart">
+                    </div>
+                    <div class="spin-modal__text">You got 4 free lifes</div>
+                    <button class="btn btn--small spin-modal__btn"><span>OK</span></button>
+                </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
